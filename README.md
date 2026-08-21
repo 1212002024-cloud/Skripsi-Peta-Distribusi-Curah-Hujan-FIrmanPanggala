@@ -1,4 +1,4 @@
-# Penerapan Metode Interpolasi Inverse Distance Weighted (IDW) Menggunakan Quantum GIS
+# Penerapan Metode Interpolasi Inverse Distance Weighted menggunakan Quantum GIS (Studi Kasus: Papua Barat dan Barat Daya)
 
 Repository ini merupakan dokumentasi pendamping tugas akhir yang membahas penerapan metode interpolasi **Inverse Distance Weighted (IDW)** menggunakan **Quantum GIS (QGIS)** untuk memetakan distribusi spasial curah hujan di wilayah **Papua Barat dan Papua Barat Daya**.
 
@@ -69,6 +69,12 @@ Tahapan penelitian secara umum adalah sebagai berikut:
 10. Perbandingan hasil interpolasi Oktober 2020 dan Oktober 2025.
 11. Validasi pola spasial dengan informasi curah hujan dari BMKG.
 12. Interpretasi hasil penelitian.
+
+Dokumentasi metodologi lengkap dapat dilihat pada [`docs/methodology.md`](docs/methodology.md).
+
+Petunjuk reproduksi lengkap tersedia pada [`docs/reproduction.md`](docs/reproduction.md).
+
+Keterbatasan penelitian dijelaskan pada [`docs/limitations.md`](docs/limitations.md).
 
 ---
 
@@ -152,11 +158,11 @@ Namun, perubahan tersebut tidak terjadi secara seragam pada seluruh wilayah pene
 
 ## Validasi
 
-Validasi dilakukan dengan membandingkan pola hasil interpolasi dengan informasi curah hujan dari BMKG.
+Validasi dilakukan secara kualitatif dengan membandingkan pola hasil interpolasi IDW dengan informasi curah hujan dari BMKG untuk periode Oktober 2020 dan Oktober 2025.
 
-Validasi digunakan untuk melihat kesesuaian pola spasial hasil interpolasi dengan kondisi data pengamatan yang tersedia.
+Validasi digunakan untuk melihat kesesuaian pola spasial hasil interpolasi dengan kondisi data pengamatan yang tersedia. Validasi ini tidak dimaksudkan sebagai pengukuran akurasi numerik menggunakan MAE, RMSE, atau metode *cross-validation*.
 
-Hasil interpolasi tetap harus dipahami sebagai estimasi spasial karena jumlah stasiun pengamatan yang digunakan dalam penelitian relatif terbatas.
+Hasil interpolasi tetap harus dipahami sebagai estimasi spasial karena jumlah dan persebaran stasiun pengamatan yang digunakan dalam penelitian relatif terbatas.
 
 ---
 
@@ -194,7 +200,7 @@ Untuk mereproduksi penelitian:
 
 Data pengamatan curah hujan yang digunakan dalam penelitian bersumber dari:
 
-## Badan Meteorologi, Klimatologi, dan Geofisika (BMKG).
+**Badan Meteorologi, Klimatologi, dan Geofisika (BMKG).**
 
 Repository ini dibuat sebagai dokumentasi akademik pendamping tugas akhir dan tidak menggantikan laporan tugas akhir secara keseluruhan.
 
@@ -226,9 +232,9 @@ Jika menggunakan repository ini sebagai referensi, silakan mengutip:
 
 ## License
 
-Kode, dokumentasi, dan materi yang dibuat secara mandiri dalam repository ini dapat digunakan sesuai dengan lisensi repository.
+Dokumentasi dan materi penelitian yang dibuat secara mandiri dalam repository ini dapat digunakan sesuai dengan lisensi repository.
 
-Data yang berasal dari pihak ketiga, termasuk data BMKG, tetap mengikuti ketentuan penggunaan dan hak dari sumber data tersebut.
+Data yang berasal dari pihak ketiga, termasuk data BMKG, tetap mengikuti ketentuan penggunaan dan hak dari sumber data tersebut. Repository ini tidak memberikan lisensi ulang terhadap data pihak ketiga.
 
 ---
 
