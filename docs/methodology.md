@@ -247,3 +247,32 @@ Untuk mereproduksi analisis, gunakan:
 - data batas wilayah penelitian;
 - parameter IDW yang tercantum pada bagian **IDW Parameters**.
 
+---
+
+## 10. Methodological Limitations
+
+Beberapa keterbatasan metodologis yang perlu diperhatikan:
+
+- Penelitian hanya menggunakan lima stasiun pengamatan.
+- Sebaran titik stasiun belum merata di seluruh wilayah penelitian.
+- Periode yang dibandingkan hanya Oktober 2020 dan Oktober 2025.
+- IDW menghasilkan nilai estimasi pada lokasi yang tidak memiliki pengamatan langsung.
+- Elevasi tidak digunakan sebagai variabel pembobot dalam interpolasi.
+- Validasi tidak menggunakan jaringan stasiun independen yang terpisah dari data input.
+- Hasil penelitian berfokus pada pemetaan dan perbandingan pola spasial, bukan pemodelan khusus risiko banjir, kekeringan, atau longsor.
+- Perbandingan dua periode tidak dapat digunakan sebagai dasar untuk menyimpulkan tren perubahan curah hujan jangka panjang.
+
+---
+
+## 11. References to Research Materials
+
+Metodologi pada dokumen ini merupakan ringkasan dari Bab III dan bagian pengolahan/analisis pada Bab IV tugas akhir.
+
+**Firman Panggala (1212002024), Universitas Bakrie, 2026.**
+
+Data curah hujan utama bersumber dari **Badan Meteorologi, Klimatologi, dan Geofisika (BMKG)**.
+
+Data batas administratif dan data referensi peta digunakan sebagai data pendukung sesuai dengan sumber yang dijelaskan dalam tugas akhir.
+
+---
+
