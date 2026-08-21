@@ -172,3 +172,69 @@ Penelitian memiliki beberapa keterbatasan:
 - Penelitian tidak dapat digunakan untuk menyimpulkan tren perubahan curah hujan jangka panjang hanya berdasarkan dua periode pengamatan.
 
 ---
+
+## Cara Mereproduksi Analisis
+Untuk mereproduksi penelitian:
+1. Install QGIS 3.38.0-Grenoble atau versi yang kompatibel.
+2. Siapkan data curah hujan dan koordinat lima stasiun pengamatan.
+3. Masukkan data titik stasiun ke dalam QGIS.
+4. Pastikan CRS data sesuai dengan konfigurasi penelitian.
+5. Jalankan proses interpolasi menggunakan algoritma IDW.
+6. Gunakan parameter IDW yang telah dicantumkan pada bagian Parameter Analisis.
+7. Simpan hasil interpolasi sebagai raster.
+8. Buat garis kontur dari raster hasil interpolasi.
+9. Lakukan visualisasi peta.
+10. Ulangi proses untuk data Oktober 2020 dan Oktober 2025.
+11. Bandingkan hasil kedua periode.
+12. Simpan hasil akhir pada folder outputs.
+
+---
+
+## Sumber Data dan Acknowledgement
+
+Data pengamatan curah hujan yang digunakan dalam penelitian bersumber dari:
+
+## Badan Meteorologi, Klimatologi, dan Geofisika (BMKG).
+
+Repository ini dibuat sebagai dokumentasi akademik pendamping tugas akhir dan tidak menggantikan laporan tugas akhir secara keseluruhan.
+
+Penggunaan kembali data pihak ketiga harus mengikuti ketentuan dan hak penggunaan dari pemilik data.
+
+---
+
+Author
+
+Firman Panggala
+
+NIM: 1212002024
+
+Universitas Bakrie
+
+Program Studi Informatika
+
+Tahun: 2026
+
+---
+
+## Citation
+
+Jika menggunakan repository ini sebagai referensi, silakan mengutip:
+
+> Panggala, Firman. (2026). Penerapan Metode Interpolasi Inverse Distance Weighted (IDW) Menggunakan Quantum GIS (Studi Kasus Papua Barat dan Barat Daya). Universitas Bakrie.
+
+---
+
+## License
+
+Kode, dokumentasi, dan materi yang dibuat secara mandiri dalam repository ini dapat digunakan sesuai dengan lisensi repository.
+
+Data yang berasal dari pihak ketiga, termasuk data BMKG, tetap mengikuti ketentuan penggunaan dan hak dari sumber data tersebut.
+
+---
+
+## Disclaimer
+
+Hasil interpolasi pada wilayah yang tidak memiliki stasiun pengamatan merupakan hasil estimasi menggunakan metode IDW. Hasil tersebut tidak dapat dianggap sebagai hasil pengukuran langsung di lapangan.
+
+Repository ini dibuat untuk keperluan dokumentasi dan reproduksi penelitian akademik.
+
