@@ -1,81 +1,200 @@
->PENERAPAN METODE INTERPOLASI INVERSE DISTANCE WEIGHTED MENGGUNAKAN_QUANTUM GIS_STUDI KASUS PAPUA BARAT DAN BARAT DAYA
+# Penerapan Metode Interpolasi Inverse Distance Weighted (IDW) Menggunakan Quantum GIS
+
+Repository ini merupakan dokumentasi pendamping tugas akhir yang membahas penerapan metode interpolasi **Inverse Distance Weighted (IDW)** menggunakan **Quantum GIS (QGIS)** untuk memetakan distribusi spasial curah hujan di wilayah **Papua Barat dan Papua Barat Daya**.
+
+Penelitian menggunakan data curah hujan dari lima stasiun pengamatan BMKG, yaitu Manokwari Selatan, Meteorologi Rendani, Meteorologi Seigun, Meteorologi Torea, dan Meteorologi Utarom. Analisis dilakukan untuk bulan Oktober tahun 2020 dan Oktober tahun 2025.
+
+Hasil utama penelitian berupa peta distribusi spasial curah hujan hasil interpolasi IDW, garis kontur, serta perbandingan pola distribusi curah hujan antara Oktober 2020 dan Oktober 2025.
 
 ---
-Repositori ini berisi proyek penerapan metode Inverse Distance Weighted (IDW) menggunakan Quantum GIS (QGIS) untuk menganalisis distribusi spasial curah hujan di Papua Barat dan Papua Barat Daya. Analisis menggunakan data lima stasiun pengamatan pada Oktober 2020 dan Oktober 2025 untuk memetakan pola sebaran curah hujan, mengestimasi nilai pada wilayah tanpa pengamatan langsung, serta membandingkan perubahan distribusi curah hujan antarperiode.
 
----
 ## Tujuan Penelitian
-Menerapkan metode interpolasi Inverse Distance Weighted (IDW) menggunakan Quantum GIS terhadap data curah hujan dari lima stasiun pengamatan di wilayah Papua Barat dan Barat Daya
-Menghasilkan dan menganalisis peta distribusi spasial curah hujan hasil interpolasi IDW pada bulan Oktober tahun 2020 dan Oktober tahun 2025.
-Menganalisis perbedaan pola distribusi spasial curah hujan hasil interpolasi antara bulan Oktober tahun 2020 dan Oktober tahun 2025.
+
+Penelitian ini bertujuan untuk:
+
+1. Menerapkan metode interpolasi **Inverse Distance Weighted (IDW)** menggunakan Quantum GIS terhadap data curah hujan dari lima stasiun pengamatan di wilayah Papua Barat dan Papua Barat Daya.
+2. Menghasilkan dan menganalisis peta distribusi spasial curah hujan hasil interpolasi IDW pada bulan Oktober tahun 2020 dan Oktober tahun 2025.
+3. Menganalisis perbedaan pola distribusi spasial curah hujan hasil interpolasi antara bulan Oktober tahun 2020 dan Oktober tahun 2025.
 
 ---
-## Analisis dilakukan menggunakan pendekatan spasial berbasis Sistem Informasi Geografis (SIG) dengan menerapkan metode Inverse Distance Weighted (IDW) menggunakan Quantum GIS (QGIS) melalui tahapan sebagai berikut:
-1. Pengumpulan dan pengolahan data curah hujan dari lima stasiun pengamatan.
 
-2. Penentuan titik lokasi stasiun pengamatan berdasarkan koordinat masing-masing stasiun.
+## Area Penelitian
 
-3. Penginputan data curah hujan ke dalam QGIS.
+Wilayah penelitian mencakup Provinsi Papua Barat dan Papua Barat Daya sesuai dengan batas wilayah administratif yang digunakan dalam penelitian.
 
-4. Penentuan parameter interpolasi IDW, termasuk nilai power (p), search radius, dan jumlah titik tetangga.
+Lima stasiun pengamatan yang digunakan sebagai titik input interpolasi adalah:
 
-5. Proses interpolasi IDW untuk menghasilkan permukaan estimasi curah hujan.
+| No. | Stasiun | Lintang | Bujur | Elevasi |
+|---|---|---:|---:|---:|
+| 1 | Manokwari Selatan | -1.47000 | 134.19000 | 20 m |
+| 2 | Meteorologi Rendani | -0.89227 | 134.05041 | 3 m |
+| 3 | Meteorologi Seigun | -0.89118 | 131.28575 | 0 m |
+| 4 | Meteorologi Torea | -2.91938 | 132.26496 | 126 m |
+| 5 | Meteorologi Utarom | -3.64333 | 133.69694 | 5 m |
 
-6. Pembuatan peta distribusi curah hujan untuk Oktober 2020 dan Oktober 2025.
-
-7. Pembuatan garis kontur/isohyet untuk memperjelas perbedaan nilai curah hujan secara spasial.
-
-8. Perbandingan hasil interpolasi Oktober 2020 dan Oktober 2025 untuk mengetahui perubahan distribusi curah hujan antarperiode.
-
-9. Validasi hasil interpolasi dengan membandingkan hasil estimasi dengan data atau sumber acuan yang digunakan dalam penelitian.
-
-10. Evaluasi hasil penerapan metode IDW dengan mempertimbangkan keterbatasan jumlah dan persebaran stasiun pengamatan.
+Sumber data stasiun: **Badan Meteorologi, Klimatologi, dan Geofisika (BMKG)**.
 
 ---
-## Data yang digunakan dalam penelitian ini meliputi:
-1. Data curah hujan bulanan pada Oktober 2020 dan Oktober 2025 dari lima stasiun pengamatan, yaitu Stasiun Seigun, Rendani, Manokwari Selatan, Torea, dan Utarom.
 
-2. Data koordinat lokasi stasiun pengamatan yang digunakan untuk menentukan posisi geografis setiap titik stasiun dalam proses interpolasi.
+## Data
 
-3. Data batas administrasi wilayah Papua Barat dan Papua Barat Daya yang digunakan sebagai batas wilayah dalam proses pemetaan dan visualisasi hasil interpolasi.
+Data utama penelitian berupa data curah hujan bulanan pada bulan Oktober tahun 2020 dan Oktober tahun 2025.
 
-4. Data pendukung dari BMKG yang digunakan sebagai sumber data curah hujan dan bahan validasi hasil penelitian.
+| Dataset | Sumber | Periode | Fungsi |
+|---|---|---|---|
+| Data curah hujan stasiun | BMKG | Oktober 2020 | Input interpolasi IDW |
+| Data curah hujan stasiun | BMKG | Oktober 2025 | Input interpolasi IDW |
+| Lokasi stasiun | BMKG | Sesuai penelitian | Titik pengamatan |
+| Batas administrasi | Data spasial penelitian | Sesuai wilayah penelitian | Batas area analisis |
 
----
-## Keterbatasan dan Etika Data
-Penelitian ini menggunakan data dari lima stasiun pengamatan dengan periode pengamatan terbatas pada Oktober 2020 dan Oktober 2025. Oleh karena itu, hasil interpolasi menggambarkan kondisi pada periode tersebut dan tidak dimaksudkan untuk menunjukkan tren curah hujan jangka panjang. Nilai pada wilayah yang tidak memiliki stasiun pengamatan langsung merupakan hasil estimasi menggunakan metode IDW berdasarkan nilai dan jarak terhadap stasiun pengamatan yang tersedia. Data diperoleh dari sumber resmi BMKG dan digunakan untuk kepentingan penelitian akademik, sedangkan pengolahan dan visualisasi dilakukan menggunakan QGIS.
+Data titik digunakan sebagai input untuk menghasilkan estimasi nilai curah hujan pada lokasi yang tidak memiliki pengamatan langsung.
 
----
-# Perangkat Lunak
-QGIS
-
----
-## Peta Area Penelitian
-<img width="868" height="671" alt="image" src="https://github.com/user-attachments/assets/50297629-7cdf-4159-acf0-4222c25928d5" />
+Nilai hasil interpolasi pada lokasi tanpa stasiun pengamatan merupakan **nilai estimasi berdasarkan metode IDW**, bukan hasil pengukuran langsung di lapangan.
 
 ---
-## Peta Hasil Interpolasi Curah Hujan di Provinsi Papua Barat dan Barat Daya Bulan Oktober 2020
-<img width="757" height="506" alt="image" src="https://github.com/user-attachments/assets/5f445675-4543-48a0-95c4-faa9bf1940c1" />
+
+## Metodologi
+
+Tahapan penelitian secara umum adalah sebagai berikut:
+
+1. Pengumpulan data curah hujan dari stasiun pengamatan BMKG.
+2. Pengumpulan data lokasi stasiun dan batas wilayah penelitian.
+3. Pemeriksaan dan persiapan data spasial.
+4. Pengolahan data titik stasiun di QGIS.
+5. Penerapan metode interpolasi **Inverse Distance Weighted (IDW)**.
+6. Pembuatan raster hasil interpolasi.
+7. Pembuatan garis kontur curah hujan.
+8. Visualisasi hasil dalam bentuk peta.
+9. Analisis distribusi spasial curah hujan.
+10. Perbandingan hasil interpolasi Oktober 2020 dan Oktober 2025.
+11. Validasi pola spasial dengan informasi curah hujan dari BMKG.
+12. Interpretasi hasil penelitian.
 
 ---
-## Peta Hasil Interpolasi Curah Hujan di Provinsi Papua Barat dan Barat Daya Bulan Oktober 2025
-<img width="796" height="563" alt="image" src="https://github.com/user-attachments/assets/7eedf9fb-2dfd-454e-b81c-5d350ccac89c" />
+
+## Metode Interpolasi IDW
+
+Inverse Distance Weighted (IDW) digunakan untuk memperkirakan nilai pada lokasi yang tidak memiliki data pengamatan langsung berdasarkan nilai dari titik-titik pengamatan di sekitarnya.
+
+Prinsip utama IDW adalah bahwa titik pengamatan yang memiliki jarak lebih dekat terhadap lokasi estimasi memiliki pengaruh yang lebih besar dibandingkan titik yang lebih jauh.
+
+Secara umum, estimasi IDW dapat dituliskan sebagai:
+
+\[
+Z(x)=\frac{\sum_{i=1}^{n} Z_i d_i^{-p}}
+{\sum_{i=1}^{n} d_i^{-p}}
+\]
+
+Keterangan:
+
+- `Z(x)` = nilai estimasi pada lokasi yang tidak diketahui
+- `Zi` = nilai pengamatan pada titik ke-i
+- `di` = jarak antara lokasi estimasi dengan titik pengamatan ke-i
+- `p` = power IDW
+- `n` = jumlah titik pengamatan
 
 ---
-Penulis
 
-Firman Panggala
+## Parameter Analisis
 
-Program Studi Sistem Informasi
+Parameter utama yang digunakan dalam proses interpolasi adalah:
 
-Universitas Bakrie
+| Parameter | Nilai |
+|---|---|
+| Metode | Inverse Distance Weighted (IDW) |
+| Power | 2 |
+| CRS | EPSG:4326 – WGS 84 |
+| Ukuran pixel X | 0.009263 |
+| Ukuran pixel Y | 0.009263 |
+| Perangkat lunak | QGIS 3.38.0-Grenoble |
+| Periode analisis | Oktober 2020 dan Oktober 2025 |
+| Jumlah stasiun | 5 |
 
-2025
+Parameter tersebut digunakan dalam proses pengolahan data spasial menggunakan QGIS.
 
+---
 
+## Hasil Penelitian
 
+### Distribusi Curah Hujan Oktober 2020
 
+Hasil interpolasi IDW digunakan untuk menggambarkan distribusi spasial curah hujan pada bulan Oktober 2020 di wilayah Papua Barat dan Papua Barat Daya.
 
+Zona hasil interpolasi menunjukkan variasi nilai curah hujan berdasarkan nilai pada lima stasiun pengamatan dan pengaruh jarak antar titik.
 
+> **Catatan:** Nilai pada area yang tidak memiliki stasiun pengamatan merupakan hasil estimasi interpolasi IDW.
 
+---
 
+### Distribusi Curah Hujan Oktober 2025
+
+Hasil interpolasi IDW juga diterapkan pada data bulan Oktober 2025 untuk memperoleh gambaran distribusi spasial curah hujan.
+
+Peta hasil interpolasi digunakan untuk melihat pola persebaran curah hujan dan membandingkannya dengan kondisi pada Oktober 2020.
+
+---
+
+## Perbandingan Oktober 2020 dan Oktober 2025
+
+Berdasarkan hasil penelitian, rata-rata curah hujan dari lima stasiun pengamatan mengalami perubahan antara kedua periode.
+
+| Tahun | Rata-rata curah hujan |
+|---|---:|
+| Oktober 2020 | 243,0 mm |
+| Oktober 2025 | 331,3 mm |
+| Perubahan | +88,3 mm |
+
+Secara rata-rata, curah hujan pada Oktober 2025 lebih tinggi dibandingkan Oktober 2020.
+
+Namun, perubahan tersebut tidak terjadi secara seragam pada seluruh wilayah penelitian. Perbedaan pola spasial perlu dipahami sebagai perbandingan antara dua periode pengamatan dan **tidak secara langsung menunjukkan tren perubahan curah hujan jangka panjang**.
+
+---
+
+## Validasi
+
+Validasi dilakukan dengan membandingkan pola hasil interpolasi dengan informasi curah hujan dari BMKG.
+
+Validasi digunakan untuk melihat kesesuaian pola spasial hasil interpolasi dengan kondisi data pengamatan yang tersedia.
+
+Hasil interpolasi tetap harus dipahami sebagai estimasi spasial karena jumlah stasiun pengamatan yang digunakan dalam penelitian relatif terbatas.
+
+---
+
+## Keterbatasan Penelitian
+
+Penelitian memiliki beberapa keterbatasan:
+
+- Jumlah stasiun pengamatan yang digunakan hanya lima titik.
+- Sebaran stasiun belum sepenuhnya merata di seluruh wilayah penelitian.
+- Periode yang dibandingkan hanya Oktober 2020 dan Oktober 2025.
+- Nilai pada lokasi tanpa stasiun merupakan hasil estimasi interpolasi.
+- Hasil penelitian tidak dimaksudkan sebagai pemodelan khusus risiko banjir, kekeringan, atau longsor.
+- Penelitian tidak dapat digunakan untuk menyimpulkan tren perubahan curah hujan jangka panjang hanya berdasarkan dua periode pengamatan.
+
+---
+
+## Struktur Repository
+
+```text
+Skripsi-Peta-Distribusi-Curah-Hujan-FIrmanPanggala/
+│
+├── README.md
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── project/
+│   └── rainfall-idw-papua-barat.qgz
+│
+├── outputs/
+│   ├── maps/
+│   ├── tables/
+│   └── charts/
+│
+├── docs/
+│   ├── methodology.md
+│   └── reproduction.md
+│
+├── CITATION.cff
+└── LICENSE
