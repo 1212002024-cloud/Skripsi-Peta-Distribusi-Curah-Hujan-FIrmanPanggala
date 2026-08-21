@@ -22,6 +22,12 @@ Penelitian ini bertujuan untuk:
 
 Wilayah penelitian mencakup Provinsi Papua Barat dan Papua Barat Daya sesuai dengan batas wilayah administratif yang digunakan dalam penelitian.
 
+### Peta Area Penelitian
+
+<img width="868" height="671" alt="image" src="https://github.com/user-attachments/assets/6962abc6-30a0-4022-857d-63d88ac18f8f" />
+
+*Gambar 1. Peta area penelitian dan lokasi stasiun pengamatan curah hujan.*
+
 Lima stasiun pengamatan yang digunakan sebagai titik input interpolasi adalah:
 
 | No. | Stasiun | Lintang | Bujur | Elevasi |
@@ -128,6 +134,10 @@ Hasil interpolasi IDW digunakan untuk menggambarkan distribusi spasial curah huj
 
 Zona hasil interpolasi menunjukkan variasi nilai curah hujan berdasarkan nilai pada lima stasiun pengamatan dan pengaruh jarak antar titik.
 
+<img width="757" height="506" alt="image" src="https://github.com/user-attachments/assets/862aa824-a4ea-4cd6-825b-de2b5b9b63a2" />
+
+*Gambar 2. Hasil interpolasi IDW distribusi curah hujan bulan Oktober 2020.*
+
 > **Catatan:** Nilai pada area yang tidak memiliki stasiun pengamatan merupakan hasil estimasi interpolasi IDW.
 
 ---
@@ -137,6 +147,10 @@ Zona hasil interpolasi menunjukkan variasi nilai curah hujan berdasarkan nilai p
 Hasil interpolasi IDW juga diterapkan pada data bulan Oktober 2025 untuk memperoleh gambaran distribusi spasial curah hujan.
 
 Peta hasil interpolasi digunakan untuk melihat pola persebaran curah hujan dan membandingkannya dengan kondisi pada Oktober 2020.
+
+<img width="796" height="563" alt="image" src="https://github.com/user-attachments/assets/b8aa9284-4a2e-4854-a6ea-1f81b848dd0c" />
+
+*Gambar 3. Hasil interpolasi IDW distribusi curah hujan bulan Oktober 2025.*
 
 ---
 
